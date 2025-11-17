@@ -2,109 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
-    <table aria-colspan="colspan">
-        <td>
-             <fieldset >
-            <legend><b>Datos personales</b></legend>
+    <form action="">
+    <table align="center" border="0" width="90%">
+        <tr>
+            <td valign="top" width="60%">
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    Nombre: 
+                    <input type="text" id="nombre" name="nombre" value=""><br><br>
 
-        </td>
-        <td>
-             <fieldset style="width: 45%;">
-            <legend><b>Datos personales</b></legend>
-        </td>
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" value=""><br> <br>
 
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" value=""><br> <br>
+
+                    <label for="hobbies">Hobbies:</label><br>
+                    <textarea id="hobbies" name="hobbies" rows="4">mis hobbies !!!!</textarea>
+                </fieldset>
+            </td>
+            <td width="40%">
+                <fieldset>
+                        <legend>Idiomas</legend>
+                        <p>Puntúa tu nivel de idiomas de 1 a 5:</p>
+                                Inglés:
+                                1<input type="radio" name="ingles" value="1">
+                                2<input type="radio" name="ingles" value="2" checked>
+                                3<input type="radio" name="ingles" value="3">
+                                4<input type="radio" name="ingles" value="4">
+                                5<input type="radio" name="ingles" value="5">
+                                <br><br>
+
+                                Francés:
+                                1<input type="radio" name="frances" value="1">
+                                2<input type="radio" name="frances" value="2">
+                                3<input type="radio" name="frances" value="3" checked>
+                                4<input type="radio" name="frances" value="4">
+                                5<input type="radio" name="frances" value="5">
+                                <br><br>
+
+                                Alemán:
+                                1<input type="radio" name="aleman" value="1" checked>
+                                2<input type="radio" name="aleman" value="2">
+                                3<input type="radio" name="aleman" value="3">
+                                4<input type="radio" name="aleman" value="4">
+                                5<input type="radio" name="aleman" value="5">
+                                <br><br>
+                </fieldset>
+                <fieldset>
+                    <legend><b>Domino los siguientes programas:</b></legend>
+                      Writer: <input type="checkbox" >
+                      Calc: <input type="checkbox">
+                      Base: <input type="checkbox">
+                      Impress: <input type="checkbox">
+                      <br><br>
+                </fieldset>
+                <fieldset>
+                    <legend><b>Trabajo con el siguiente Sistema Operativo:</b></legend>
+                    <select>
+                        <option>Linux</option>
+                        <option>Windows</option>
+                        <option>macOS</option>
+                    </select>
+                </fieldset>
+            </td>
+        </tr>
 
     </table>
-       
-     <fieldset style="width: 45%;">
-     <legend><b>Datos personales</b></legend>
-        
-     </fieldset>
-     <fieldset style="width: 45%;">
+    </form>
 
-     </fieldset>
+   
 
-
-<br>
-<br><br><br><br>
-        <tr>
-            <td rowspan="3" valign="bottom" align="center">
-            </td>
-            <td  width="40%">
-                <p>Idiomas</p>
-                <p>Puntúa tu nivel de idomas de 1 a 5:</p>
-                Inglés: 
-                    1<input type="radio" name="Inglés" value="1" checked="checked" /> 
-                    2<input type="radio" name="Inglés" value="2" /> 
-                    3<input type="radio" name="Inglés" value="3" /> 
-                    4<input type="radio" name="Inglés" value="4" /> 
-                    5<input type="radio" name="Inglés" value="5" /> 
-
-                <br>
-                <br>
-                 Francés: 
-                    1<input type="radio" name="Francés" value="1" checked="checked" /> 
-                    2<input type="radio" name="Francés" value="2" /> 
-                    3<input type="radio" name="Francés" value="3" /> 
-                    4<input type="radio" name="Francés" value="4" /> 
-                    5<input type="radio" name="Francés" value="5" /> 
-                <br>
-                <br>
-                 Alemán: 
-                    1<input type="radio" name="Alemán" value="1" checked="checked" /> 
-                    2<input type="radio" name="Alemán" value="2" /> 
-                    3<input type="radio" name="Alemán" value="3" /> 
-                    4<input type="radio" name="Alemán" value="4" /> 
-                    5<input type="radio" name="Alemán" value="5" /> 
-                <br>
-                <br>
-                   
-            </td>
-        </tr>
-        <tr>
-            <td>Domino los siguientes problemas</td>
-        </tr>
-        <tr>
-            <td>Trabajo con el siguiente sistema Operativo:</td>
-        </tr>
-    </table>
-
-
-
-
-
-    <fieldset>
-<b>Idiomas</b>
-  <p>Puntúa tu nivel de idiomas de 1 a 5:</p>
-
-  <label>Inglés:</label>
-  <input type="radio" name="ingles" value="1">1
-  <input type="radio" name="ingles" value="2" checked>2
-  <input type="radio" name="ingles" value="3">3
-  <input type="radio" name="ingles" value="4">4
-  <input type="radio" name="ingles" value="5">5
-  <br>
-
-  <label>Francés:</label>
-  <input type="radio" name="frances" value="1">1
-  <input type="radio" name="frances" value="2" checked>2
-  <input type="radio" name="frances" value="3">3
-  <input type="radio" name="frances" value="4">4
-  <input type="radio" name="frances" value="5">5
-  <br>
-
-  <label>Alemán:</label>
-  <input type="radio" name="aleman" value="1">1
-  <input type="radio" name="aleman" value="2" checked>2
-  <input type="radio" name="aleman" value="3">3
-  <input type="radio" name="aleman" value="4">4
-  <input type="radio" name="aleman" value="5">5
-</fieldset>
 
 
 </body>
