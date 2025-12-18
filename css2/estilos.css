@@ -74,6 +74,11 @@ p {
     text-decoration: none;
 }
 
+#menu a:hover {
+    text-decoration-line: underline;
+    text-decoration-color:  blue;
+}
+
 
 #menu li{
     display: inline;
