@@ -37,6 +37,14 @@ table {
   text-align: center;  
 }
 
+
+
+/* Diseño de botones bonito 
+para no poner botones feos he utilizado un poco de Ia 
+para que se vea un poco mejor  */
+
+
+
 .button1 {
 align-items: center;
   --glow-color: rgb(116, 113, 113);
@@ -193,10 +201,10 @@ align-items: center;
 
  .button4 {
   align-items: center;
-  --glow-color: rgb(103, 118, 214);
-  --glow-spread-color: rgba(123, 125, 255, 0.781);
-  --enhanced-glow-color: rgb(231, 206, 255);
-  --btn-color: rgb(61, 66, 136);
+  --glow-color: rgb(220, 143, 49);
+  --glow-spread-color: rgba(188, 89, 27, 0.781);
+  --enhanced-glow-color: rgb(230, 73, 16);
+  --btn-color: rgb(206, 89, 31);
   border: .25em solid var(--glow-color);
   padding: 0.5em 1em;
   color: var(--glow-color);
