@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vídeo Full-Screen → iPhone Horizontal</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background:#000;
+      color:#fff;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height:420vh;
+      overflow-x:hidden;
+    }
+    main { 
+      height:220vh; 
+      position:relative; 
+    }
+    .scene {
+      position:sticky;
+      top:0;
+      height:100vh;
+      width:100vw;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      z-index:10;
+    }
+    .phone-container {
+      position:relative;
+      width:100vw;                   /* full width inicial */
+      height:100vh;                  /* full height inicial */
+      transform:scale(1);            /* empieza a tamaño real */
+      opacity:1;
+      transition:all 1.6s cubic-bezier(0.16,1,0.3,1);
+    }
+    .content {
+      position:absolute;
+      inset:0;                       /* full-screen al inicio */
+      overflow:hidden;
+      background:#000;
+      transition:all 1.6s cubic-bezier(0.16,1,0.3,1);
+    }
+    video {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    /* Cuando se activa el scroll: reduce y mete en el marco horizontal */
+    .scene.animate .phone-container {
+      width:95vw;
+      max-width:820px;               /* tamaño final razonable en horizontal */
+      height:auto;
+      aspect-ratio:19.6 / 9;
+      transform:scale(0.98);
+      opacity:1;
+    }
+    .scene.animate .content {
+      inset:5%;                      /* ajusta 4.5%–5.5% según el marco */
+      border-radius:36px;
+      transform:scale(0.96) translateY(2%);
+      box-shadow:0 60px 160px #000c;
+    }
+
+    /* Marco del iPhone horizontal (usa uno con buena transparencia) */
+    .frame {
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      pointer-events:none;
+      z-index:3;
+      opacity:0;
+      transition:opacity 1.2s ease 0.4s;
+    }
+    .scene.animate .frame {
+      opacity:1;
+    }
+
+    .after {
+      position:relative;
+      z-index:5;
+      background:linear-gradient(#000 20%, #111);
+      padding:160px 20px;
+      min-height:140vh;
+    }
+    .text-center { text-align:center; margin:40vh 0 10vh; font-size:3rem; font-weight:600; }
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="scene" id="scene">
+    <div class="phone-container">
+      <!-- Marco horizontal del iPhone (cambia por uno mejor si encuentras) -->
+   
+
+      <div class="content">
+        <video autoplay muted loop playsinline>
+          <source src="img/0115.mp4" type="video/mp4">
+          Tu navegador no soporta vídeo.
+        </video>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="after">
+  <h1 class="text-center">Ahora en horizontal en tu iPhone</h1>
+  <!-- Resto de tu página -->
+</div>
+
+<script>
+window.addEventListener('scroll', () => {
+  const scene = document.getElementById('scene');
+  const rect = scene.getBoundingClientRect();
+  const trigger = window.innerHeight * 0.18; // empieza pronto para que se note el cambio
+  
+  if (rect.top < trigger) {
+    scene.classList.add('animate');
+  } else {
+    scene.classList.remove('animate');
+  }
+});
+</script>
+</body>
+</html>
