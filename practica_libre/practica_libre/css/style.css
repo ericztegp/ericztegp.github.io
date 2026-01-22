@@ -4,7 +4,7 @@
 }
 
 body{
-     background-color: #6e0d68;
+     background-color: #351333;
      
 }
 
@@ -49,7 +49,7 @@ body{
 
 
 #menu {
-  position: fixed;
+  position: absolute;
   top: 0%;
   width: 100%;
 
@@ -89,12 +89,12 @@ p, h1{
   justify-content: center;
 
   padding: 20px;
-  border: 5px dashed rgb(255, 255, 255);
   background-color: rgb(70, 67, 67);
   height: 300px;
   border-radius: 30px 30px 30px 30px ;   
   margin-left: 20px;
   margin-right: 20px;  
+  color: rgb(231, 230, 230);
 }
 
 
@@ -103,15 +103,19 @@ p, h1{
   justify-content: center;
 
   padding: 20px;
-  border: 5px dashed rgb(255, 255, 255);
   background-color: rgb(70, 67, 67);
   height: 300px;
   border-radius: 30px 30px 30px 30px ;   
   margin-left: 20px;
   margin-right: 20px;
+  color: rgb(231, 230, 230);
 }
 
-
+.name{
+  justify-content: center;
+  text-align: center;
+  color: aliceblue;
+}
 
 @media (max-width: 1200px) {
     #img1 {
@@ -120,9 +124,6 @@ p, h1{
     height: auto;
     }
 
-
-
- 
   #imageLeft, #imageRight {
     float: none;
     text-align: center;

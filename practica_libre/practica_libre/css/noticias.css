@@ -1,0 +1,96 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.header {
+  background-color: #414141;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.menu {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.menu a:hover {
+  color: #ff9800;
+}
+
+#content {
+  width: 960px;       
+  margin: 20px auto;  
+}
+
+#imageRight,
+#imageLeft {
+  float: left;           
+  width: 450px;          
+  margin-right: 20px;    
+  margin-bottom: 20px;   
+}
+
+#textoizq, 
+#textoder {
+  overflow: hidden;      
+  margin-bottom: 40px;   
+}
+
+#content img {
+  width: 100%;         
+  height: auto;
+  border-radius: 30px;
+}
+
+.button {
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+#content h1 {
+  margin-bottom: 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  #content {
+    width: 90%;  
+  }
+
+  #imageRight,
+  #imageLeft,
+  #textoizq,
+  #textoder {
+    float: none;      
+    width: 100%;      
+    margin-right: 0;  
+  }
+}
