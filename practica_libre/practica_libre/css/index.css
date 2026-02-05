@@ -37,6 +37,15 @@
   text-decoration: underline rgb(174, 174, 174);
 }
 
+.menu-derecha {
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  flex-direction: column;
+  z-index: 999;
+}
+
+
 
 .logo {
     height: 40px;      
@@ -475,4 +484,15 @@ body {
   .footer {
     padding: 40px 20px;
   }
+
+  .cookie-alert {
+        top: auto;
+        bottom: 20px;              /* pegado abajo */
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 40px);  /* márgenes laterales */
+        max-width: none;
+        border-radius: 15px;
+        padding: 20px;
+    }
 }

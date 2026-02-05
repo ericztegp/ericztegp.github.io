@@ -17,22 +17,37 @@
     <h2>¡Usamos cookies!</h2>
     <p>Este sitio web utiliza cookies para mejorar tu experiencia.</p>
     <button id="acceptBtn">Aceptar</button>
+
 </div>
 <script src="script.js"></script>
+    
 
-    <nav id="menu">
+
+   <button id="toggleMenu">Mover menú</button>
+
+<nav id="menu" class="menu">
     <a href="index.html">
         <img src="img/Gemini_Generated_Image_u0dusu0dusu0dusu.png" class="logo" alt="Logo">
     </a>
-    
+
     <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="Review.html">Review Coches</a></li>
         <li><a href="Noticias.html">Noticias</a></li>
         <li><a href="Ofertas.html">Ofertas</a></li>
-        <li><a href="#">Contactanos</a></li>
+        <li><a href="#">Contáctanos</a></li>
     </ul>
-    </nav>
+</nav>
+
+<script>
+  const boton = document.getElementById("toggleMenu");
+  const menu = document.getElementById("menu");
+
+  boton.addEventListener("click", () => {
+    menu.classList.toggle("menu-derecha");
+  });
+</script>
+
 
     <div class="imagen">
             <img id="img1" src="img/huracan.png" alt="">

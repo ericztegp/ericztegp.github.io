@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+
+        }
+
+
+        .padre{
+            border: 5px black solid;
+            display: flex;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .hijo{
+            border: 5px red solid;
+            width: 200px;
+        }
+
+        nav{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav img{
+            width: 50px;
+        }
+
+
+        nav a:first-child{
+             margin-right: auto;
+             
+        }
+
+        nav a.vertical {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <nav class="menu">
+        <a href=""><img src="images/62a6360f03a870b920cbfd41.png" alt=""></a>
+        <a href="">Home</a>
+        <a href="">Hola</a>
+
+        <a href="" class="vertical">
+        <img src="images/62a6360f03a870b920cbfd41.png" alt="">
+        Hola
+    </a>
+    </nav> 
+
+
+
+
+    <div class="padre">
+        <div class="hijo">
+            hijo1
+        </div>
+        <div class="hijo">
+            hijo2
+        </div>
+         <div class="hijo">
+            hijo1
+        </div>
+        <div class="hijo">
+            hijo2
+        </div>
+         <div class="hijo">
+            hijo1
+        </div>
+        <div class="hijo">
+            hijo2
+        </div>
+    </div>
+</body>
+</html>
